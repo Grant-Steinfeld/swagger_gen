@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  title: Pet Store API
+  version: 1.0.0
+  description: API for African Dogs, Cats, and Tropical Fish inventory with validation.
+servers:
+  - url: http://localhost:3000/api
+paths:  :
+    :
+      summary:  
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              ": '#/components/schemas/Pet'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Validation error
+        '500':
+          description: Internal server error  :
+    :
+      summary:  
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              ": '#/components/schemas/Pet'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Validation error
+        '500':
+          description: Internal server error  :
+    :
+      summary:  
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              ": '#/components/schemas/Pet'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Validation error
+        '500':
+          description: Internal server error  :
+    :
+      summary:  
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              ": '#/components/schemas/Pet'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Validation error
+        '500':
+          description: Internal server errorcomponents:
+  schemas:
+    Pet:
+      type: object
+      required:
+        - type
+        - breed
+        - name
+        - age
+      properties:
+      type:
+        type: string
+        enum: [dog, cat, fish]
+      breed:
+        type: string
+      name:
+        type: string
+      age:
+        type: number
