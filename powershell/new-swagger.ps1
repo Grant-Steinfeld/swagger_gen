@@ -69,6 +69,9 @@ foreach ($line in $petSchemaLines) {
 }
 
 # Compose OpenAPI YAML
+# ...existing code...
+
+# Compose OpenAPI YAML
 $yaml = @"
 openapi: 3.0.0
 info:
@@ -91,6 +94,31 @@ foreach ($route in $routes) {
           application/json:
             schema:
               `"$ref`: '#/components/schemas/Pet'`
+            examples:
+              dogExample:
+                summary: Example Dog
+                value:
+                  type: dog
+                  breed: "Africanis"
+                  name: "Simba"
+                  age: 3
+                  description: "Friendly, loyal, and energetic."
+              catExample:
+                summary: Example Cat
+                value:
+                  type: cat
+                  breed: "Abyssinian"
+                  name: "Nala"
+                  age: 2
+                  description: "Curious, agile, and affectionate."
+              fishExample:
+                summary: Example Tropical Fish
+                value:
+                  type: fish
+                  breed: "Congo Tetra"
+                  name: "Bubbles"
+                  age: 1
+                  description: "Colorful, peaceful, and active."
       responses:
         '200':
           description: Success
@@ -110,10 +138,14 @@ components:
 $(($required | ForEach-Object { "        - $_" }) -join "`n")
       properties:
 $(($properties -join "`n"))
+      description:
+        type: string
+        description: Description of the pet's characteristics, temperament, or notable features.
 "@
 
 Set-Content -Path $outputFile -Value $yaml
 Write-Output "OpenAPI spec generated at $outputFile"
+
 # This script generates a basic OpenAPI YAML spec for the Express pet store API by extracting routes, models, validation, and error responses.
 # The output is written to openapi.yaml in the current directory.
 # This script is a starting point and may require manual refinement for a complete OpenAPI spec.

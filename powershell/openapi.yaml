@@ -14,6 +14,31 @@ paths:  :
           application/json:
             schema:
               ": '#/components/schemas/Pet'
+            examples:
+              dogExample:
+                summary: Example Dog
+                value:
+                  type: dog
+                  breed: "Africanis"
+                  name: "Simba"
+                  age: 3
+                  description: "Friendly, loyal, and energetic."
+              catExample:
+                summary: Example Cat
+                value:
+                  type: cat
+                  breed: "Abyssinian"
+                  name: "Nala"
+                  age: 2
+                  description: "Curious, agile, and affectionate."
+              fishExample:
+                summary: Example Tropical Fish
+                value:
+                  type: fish
+                  breed: "Congo Tetra"
+                  name: "Bubbles"
+                  age: 1
+                  description: "Colorful, peaceful, and active."
       responses:
         '200':
           description: Success
@@ -29,6 +54,31 @@ paths:  :
           application/json:
             schema:
               ": '#/components/schemas/Pet'
+            examples:
+              dogExample:
+                summary: Example Dog
+                value:
+                  type: dog
+                  breed: "Africanis"
+                  name: "Simba"
+                  age: 3
+                  description: "Friendly, loyal, and energetic."
+              catExample:
+                summary: Example Cat
+                value:
+                  type: cat
+                  breed: "Abyssinian"
+                  name: "Nala"
+                  age: 2
+                  description: "Curious, agile, and affectionate."
+              fishExample:
+                summary: Example Tropical Fish
+                value:
+                  type: fish
+                  breed: "Congo Tetra"
+                  name: "Bubbles"
+                  age: 1
+                  description: "Colorful, peaceful, and active."
       responses:
         '200':
           description: Success
@@ -44,6 +94,31 @@ paths:  :
           application/json:
             schema:
               ": '#/components/schemas/Pet'
+            examples:
+              dogExample:
+                summary: Example Dog
+                value:
+                  type: dog
+                  breed: "Africanis"
+                  name: "Simba"
+                  age: 3
+                  description: "Friendly, loyal, and energetic."
+              catExample:
+                summary: Example Cat
+                value:
+                  type: cat
+                  breed: "Abyssinian"
+                  name: "Nala"
+                  age: 2
+                  description: "Curious, agile, and affectionate."
+              fishExample:
+                summary: Example Tropical Fish
+                value:
+                  type: fish
+                  breed: "Congo Tetra"
+                  name: "Bubbles"
+                  age: 1
+                  description: "Colorful, peaceful, and active."
       responses:
         '200':
           description: Success
@@ -59,6 +134,31 @@ paths:  :
           application/json:
             schema:
               ": '#/components/schemas/Pet'
+            examples:
+              dogExample:
+                summary: Example Dog
+                value:
+                  type: dog
+                  breed: "Africanis"
+                  name: "Simba"
+                  age: 3
+                  description: "Friendly, loyal, and energetic."
+              catExample:
+                summary: Example Cat
+                value:
+                  type: cat
+                  breed: "Abyssinian"
+                  name: "Nala"
+                  age: 2
+                  description: "Curious, agile, and affectionate."
+              fishExample:
+                summary: Example Tropical Fish
+                value:
+                  type: fish
+                  breed: "Congo Tetra"
+                  name: "Bubbles"
+                  age: 1
+                  description: "Colorful, peaceful, and active."
       responses:
         '200':
           description: Success
@@ -84,3 +184,6 @@ paths:  :
         type: string
       age:
         type: number
+      description:
+        type: string
+        description: Description of the pet's characteristics, temperament, or notable features.
