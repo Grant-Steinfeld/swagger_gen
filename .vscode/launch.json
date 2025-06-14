@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug Express API (TypeScript)",
+      "program": "${workspaceFolder}/src/index.ts",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "cwd": "${workspaceFolder}",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/build/**/*.js"
+      ]
+    }
+  ]
+}

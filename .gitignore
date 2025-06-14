@@ -1,6 +1,6 @@
 .DS_Store
 build/
-.vscode/
+#.vscode/
 node_modules/
 dist/
 # Logs
